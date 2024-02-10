@@ -1,0 +1,16 @@
+<mxfile host="65bd71144e">
+    <diagram id="FOnBsZKYHUjd3wYpOmy5" name="Page-1">
+        <mxGraphModel dx="510" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="discretization" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="70" width="350" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;div style=&quot;text-align: justify;&quot;&gt;input:&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;feature raw data&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;bins:离散值，根据这些配置进行离散化处理&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;method:&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;sklearn.preprocess.FunctionTransformer()&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;pd.cut&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;df.as_matrix&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;np.array&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;scipy.sparse.csr_matrix&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;output:&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;feature raw data&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;feature discretization data&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;vector: (discretization value,...)&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;encoder_dict:(vector_index, raw_feature_name)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="2">
+                    <mxGeometry x="20" y="35" width="280" height="240" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
