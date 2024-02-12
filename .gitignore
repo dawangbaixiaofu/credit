@@ -3,3 +3,4 @@ GiveMeSomeCredit.zip
 *.npz
 *.pkl
 *.csv
+*.joblib
