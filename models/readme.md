@@ -18,4 +18,15 @@
 
 
 
+## 保序回归模型
+保序回归规划问题描述如下：
 
+$$
+\\begin{aligned}
+target:& min \sum_{i=1}^{n} w_i * (y_i - f_i)^2 \\
+subject \quad to:& f_i \leq f_j, when \quad x_i \leq x_j \\
+x 是特征值且维度是一维
+\\end{aligned}
+$$
+
+解一般是分段单调函数，而逻辑回归的解是一条直线，保序回归一般比逻辑回归更适合用于概率校验。
