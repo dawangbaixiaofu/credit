@@ -45,6 +45,9 @@ from sklearn.calibration import CalibratedClassifierCV
 from sklearn.isotonic import IsotonicRegression
 from sklearn.isotonic import check_increasing
 from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import make_classification
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
 
 import numpy as np 
 import pandas as pd 
@@ -66,25 +69,32 @@ class Calibrator:
         
 
     def fit(self, X, y, **fit_params):
+        if not isinstance(X, np.ndarray):
+            X = np.array(X)
+
         if self.method == "isotonic":
             self.clf = IsotonicRegression(y_min=0, y_max=1, increasing=True, out_of_bounds='clip')
         elif self.method == "sigmoid":
             self.clf = LogisticRegression()
+            X = X.reshape(-1, 1)
         
         self.clf.fit(X, y)
         return self
 
     def predict_proba(self, X):
+        if not isinstance(X, np.ndarray):
+            X = np.array(X)
         if self.method == "isotonic":
             proba = self.clf.predict(X)
         elif self.method == "sigmoid":
-            proba = self.clf.predict_proba(X)
+            X = X.reshape(-1, 1)
+            proba = self.clf.predict_proba(X)[:, 1]
         return proba
 
 
     
 
-def gen_calibration_curve_data(y_prob, y_true, n_bins=30):
+def gen_calibration_curve_data(y_prob, y_true, n_bins=10):
     '''
     * 等距划分
     分位数划分
@@ -107,23 +117,30 @@ def gen_calibration_curve_data(y_prob, y_true, n_bins=30):
 
 
 def make_calibrate_data(n_samples):
-    pred_proba = np.random.uniform(size=n_samples)
-    _max = np.max(pred_proba)
-    _min = np.min(pred_proba)
-    pred_proba = (pred_proba-_min)/(_max - _min)
+    # 使用分类模型产生概率，而非直接生成概率
+    X, y = make_classification(n_samples=n_samples, n_features=20, n_informative=10, n_redundant=5)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+    estimator = LogisticRegression().fit(X_train, y_train)
+    pred_proba = estimator.predict_proba(X_test)[:, 1]
 
-    label = []
-    error = 0.2
-    for p in pred_proba:
-        choice_proba = p + error * np.random.randint(low=-2, high=3)
-        if choice_proba > 1:
-            choice_proba = 1
-        elif choice_proba < 0:
-            choice_proba = 0
-        random_label = np.random.choice(a=[0,1], p=[1-choice_proba, choice_proba])
-        label.append(int(random_label))
 
-    return pred_proba, label
+    # pred_proba = np.random.uniform(size=n_samples)
+    # _max = np.max(pred_proba)
+    # _min = np.min(pred_proba)
+    # pred_proba = (pred_proba-_min)/(_max - _min)
+
+    # label = []
+    # error = 0.2
+    # for p in pred_proba:
+    #     choice_proba = p + error * np.random.randint(low=-2, high=3)
+    #     if choice_proba > 1:
+    #         choice_proba = 1
+    #     elif choice_proba < 0:
+    #         choice_proba = 0
+    #     random_label = np.random.choice(a=[0,1], p=[1-choice_proba, choice_proba])
+    #     label.append(int(random_label))
+
+    return pred_proba, y_test
 
 
 """
@@ -159,14 +176,12 @@ def isotonic_curve(proba_predict, proba_calibrate):
 
 
 if __name__ == "__main__":
+    # 测试集
     proba_predict, y = make_calibrate_data(n_samples=5000)
-    df = pd.DataFrame({'proba_predict':proba_predict, 'y':y})
-    print(df.head())
-
     calibrator = Calibrator(method="isotonic")
     calibrator.fit(proba_predict, y)
     proba_calibration = calibrator.predict_proba(proba_predict)
-
+    df = pd.DataFrame({'proba_predict':proba_predict, 'y':y})
     df['proba_calibration'] = proba_calibration
     print(df.head())
     
