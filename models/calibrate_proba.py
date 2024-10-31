@@ -132,10 +132,10 @@ perfect curve VS calibrated curve VS uncalibrated curve
 """
 import matplotlib.pyplot as plt 
 
-def calibrate_curve(proba_predit, proba_calibration, proba_true_uncalibrate, proba_true_calibrate):
+def calibrate_curve(proba_predict, proba_calibration, proba_true_uncalibrate, proba_true_calibrate):
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
-    ax.plot(proba_predit, proba_true_uncalibrate, label="uncalirate", linestyle="-.", color='red')
+    ax.plot(proba_predict, proba_true_uncalibrate, label="uncalirate", linestyle="-.", color='red')
     ax.plot(proba_calibration, proba_true_calibrate, label="calibrate", linestyle="--", color='green')
     # perfect curve
     perfect_x = [x/100 for x in range(101)]
@@ -148,6 +148,14 @@ def calibrate_curve(proba_predit, proba_calibration, proba_true_uncalibrate, pro
     ax.set_ylabel("Probability True")
     plt.show()
 
+def isotonic_curve(proba_predict, proba_calibrate):
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+    ax.plot(proba_predict, proba_calibrate, label="isotonic", linestyle="-")
+    ax.set_title("Isotonic Regression Figure")
+    ax.set_xlabel("Probability Prediction")
+    ax.set_ylabel("Probability Isonotic")
+    plt.show()
 
 
 if __name__ == "__main__":
@@ -170,6 +178,13 @@ if __name__ == "__main__":
     proba_pred_bin, proba_true_bin = gen_calibration_curve_data(proba_predict, y)
     proba_calibration_bin, proba_calibration_true_bin = gen_calibration_curve_data(proba_calibration, y)
     calibrate_curve(proba_pred_bin, proba_calibration_bin, proba_true_bin, proba_calibration_true_bin)
+    
+    # visual isotonic regression figure
+    isotonic_data = [(x,y) for x, y in zip(proba_predict, proba_calibration)]
+    isotonic_data_sorted = sorted(isotonic_data, key=lambda x:x[0])
+    proba_predict_sorted = [x[0] for x in isotonic_data_sorted]
+    proba_calibrate_sorted = [x[1] for x in isotonic_data_sorted]
+    isotonic_curve(proba_predict_sorted, proba_calibrate_sorted)
 
     # check bined data
     data_uncalibrate = {'proba_pred_bin':proba_pred_bin, 
