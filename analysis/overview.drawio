@@ -1,0 +1,498 @@
+<mxfile host="65bd71144e">
+    <diagram id="jUOTSqU0_IoCIOJnX-ZJ" name="Page-1">
+        <mxGraphModel dx="3859" dy="1749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="63" value="block_1" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-710" y="80" width="630" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="users" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="63" vertex="1">
+                    <mxGeometry x="70" y="50" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="ID&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="64" vertex="1">
+                    <mxGeometry y="30" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="actions" style="swimlane;whiteSpace=wrap;html=1;" parent="63" vertex="1">
+                    <mxGeometry x="390" y="50" width="200" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="action1" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="70" vertex="1">
+                    <mxGeometry x="20" y="40" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="ID&#10;action_datetime_1&#10;action_label_1" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="66" vertex="1">
+                    <mxGeometry y="30" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="action2" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="70" vertex="1">
+                    <mxGeometry x="20" y="140" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="ID&#10;action_datetime_2&#10;action_label_2" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="68" vertex="1">
+                    <mxGeometry y="30" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="action_i" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="70" vertex="1">
+                    <mxGeometry x="20" y="240" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="ID&#10;action_datetime_i&#10;action_label_i" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="71" vertex="1">
+                    <mxGeometry y="30" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="left join" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="63" vertex="1">
+                    <mxGeometry x="110" y="210" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="63" source="65" target="73" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="270" y="390" as="sourcePoint"/>
+                        <mxPoint x="320" y="340" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="users' actions" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="63" vertex="1">
+                    <mxGeometry x="70" y="400" width="160" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="ID&#10;action_datetime_1&#10;action_label_1&#10;action_datetime_2&#10;action_label_2&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="61" vertex="1">
+                    <mxGeometry y="30" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="63" source="73" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="360" as="sourcePoint"/>
+                        <mxPoint x="340" y="360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="output" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="76" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="243" value="" style="endArrow=classic;html=1;fontColor=#f0f0f0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="63" target="73" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="390" y="250" as="sourcePoint"/>
+                        <mxPoint x="530" y="180" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="block_2" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-710" y="760" width="1080" height="900" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="可能原因" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" parent="78" vertex="1">
+                    <mxGeometry x="15" y="50" width="1050" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="基本特征" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="96" vertex="1">
+                    <mxGeometry x="60" y="50" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="行业&#10;风险挡位&#10;额度挡位&#10;额占率&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="86" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="用户细分" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="96" vertex="1">
+                    <mxGeometry x="260" y="50" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="在贷&#10;结清60+&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="88" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="用户行为" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="96" vertex="1">
+                    <mxGeometry x="460" y="50" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="访问客户借款页&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="90" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="人行征信" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="96" vertex="1">
+                    <mxGeometry x="660" y="50" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="是否在他行授信&#10;是否在他行借款&#10;是否在他行在贷&#10;他行在贷机构数&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="92" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="etc" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="96" vertex="1">
+                    <mxGeometry x="860" y="50" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="94" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="数据明细" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" parent="78" vertex="1">
+                    <mxGeometry x="12.5" y="300" width="1050" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="基本特征-行业" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="97" vertex="1">
+                    <mxGeometry x="60" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="id&#10;datetime&#10;industry_name_l4" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="98" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="基本特征-额占率" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="97" vertex="1">
+                    <mxGeometry x="255" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="id&#10;datetime&#10;额占率" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="102" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="用户细分-在贷" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="97" vertex="1">
+                    <mxGeometry x="660" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="id&#10;datetime&#10;在贷" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="104" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="etc" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="97" vertex="1">
+                    <mxGeometry x="860" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="106" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="用户行为-访问借款页" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="97" vertex="1">
+                    <mxGeometry x="455" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="id&#10;datetime&#10;page_name" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="100" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="明细数据处理" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" parent="78" vertex="1">
+                    <mxGeometry x="12.5" y="500" width="1057.5" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="时间区间统计" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="113" vertex="1">
+                    <mxGeometry x="215" y="30" width="185" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="id&#10;时间区间内个数或总数&#10;时间区间为：&#10;[运营开始时间， 运营结束时间]" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="115" vertex="1">
+                    <mxGeometry y="30" width="185" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="时间点统计" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="113" vertex="1">
+                    <mxGeometry x="595" y="30" width="160" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="id&#10;时间点状态&#10;时间点为：运营开始时间" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="117" vertex="1">
+                    <mxGeometry y="30" width="160" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="原因指标[output]" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=23;" parent="78" vertex="1">
+                    <mxGeometry x="12.5" y="690" width="1050" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="基本特征-行业" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="119" vertex="1">
+                    <mxGeometry x="60" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="id&#10;industry_name_l4" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="120" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="基本特征-额占率" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="119" vertex="1">
+                    <mxGeometry x="255" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="id&#10;额占率" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="122" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="用户细分-在贷" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="119" vertex="1">
+                    <mxGeometry x="660" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="id&#10;在贷" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="124" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="etc" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="119" vertex="1">
+                    <mxGeometry x="860" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="126" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="用户行为-访问借款页" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="119" vertex="1">
+                    <mxGeometry x="455" y="25" width="160" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="id&#10;page_cnt" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="128" vertex="1">
+                    <mxGeometry y="30" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="block_3" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="80" width="610" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="block_1[input]" style="swimlane;whiteSpace=wrap;html=1;" parent="130" vertex="1">
+                    <mxGeometry x="70" y="60" width="200" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="block_2[input]" style="swimlane;whiteSpace=wrap;html=1;" parent="130" vertex="1">
+                    <mxGeometry x="330" y="60" width="210" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="原因指标汇总表[output]" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="130" vertex="1">
+                    <mxGeometry x="120" y="260" width="340" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="ID&#10;action_datetime_i&#10;action_label_i&#10;行业&#10;额占率&#10;在贷&#10;借款页访问次数&#10;是否在他行授信&#10;是否在他行借款&#10;是否在他行在贷&#10;他行在贷机构数&#10;...&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="133" vertex="1">
+                    <mxGeometry y="30" width="340" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="原因分析" style="swimlane;fontColor=#f0f0f0;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="730" width="1400" height="1450" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="单因素分析" style="swimlane;startSize=20;horizontal=1;containerType=tree;" parent="189" vertex="1">
+                    <mxGeometry x="50" y="50" width="740" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="Parent" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="155" vertex="1">
+                    <mxGeometry x="300" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="155" source="157" target="161" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="行业2&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="155" vertex="1">
+                    <mxGeometry x="200" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="162" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="155" source="157" target="163" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="行业1&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="155" vertex="1">
+                    <mxGeometry x="50" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="155" source="157" target="165" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="行业3&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="155" vertex="1">
+                    <mxGeometry x="410" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="155" source="157" target="167" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="行业_i&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="155" vertex="1">
+                    <mxGeometry x="570" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="多因素分析" style="swimlane;startSize=20;horizontal=1;containerType=tree;" parent="189" vertex="1">
+                    <mxGeometry x="50" y="320" width="740" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="Parent" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="300" y="40" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="169" target="171" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="171" value="&lt;font color=&quot;#23a9f2&quot;&gt;行业2&lt;br&gt;提款率&lt;/font&gt;" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="200" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="169" target="173" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="行业1&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="50" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="174" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="169" target="175" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="175" value="行业3&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="410" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="169" target="177" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="177" value="行业_i&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="570" y="140" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="185" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="171" target="186" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="1710" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="186" value="在贷-是&lt;br&gt;提款率" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="130" y="220" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;startArrow=none;endArrow=none;" parent="168" source="171" target="188" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="1710" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="188" value="&lt;font color=&quot;#02a9f2&quot;&gt;在贷-否&lt;br&gt;提款率&lt;/font&gt;" style="whiteSpace=wrap;html=1;treeFolding=1;treeMoving=1;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;startArrow&quot;:&quot;none&quot;,&quot;endArrow&quot;:&quot;none&quot;};" parent="168" vertex="1">
+                    <mxGeometry x="290" y="220" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="189" vertex="1">
+                    <mxGeometry x="890" y="450" width="380" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="191" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="190" vertex="1">
+                    <mxGeometry width="380" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="192" value="行业" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="191" vertex="1">
+                    <mxGeometry width="127" height="67" as="geometry">
+                        <mxRectangle width="127" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="193" value="在贷" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="191" vertex="1">
+                    <mxGeometry x="127" width="123" height="67" as="geometry">
+                        <mxRectangle width="123" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="194" value="提款率（升序）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="191" vertex="1">
+                    <mxGeometry x="250" width="130" height="67" as="geometry">
+                        <mxRectangle width="130" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="195" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="190" vertex="1">
+                    <mxGeometry y="67" width="380" height="66" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="行业1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="195" vertex="1">
+                    <mxGeometry width="127" height="66" as="geometry">
+                        <mxRectangle width="127" height="66" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="197" value="在贷-是" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="195" vertex="1">
+                    <mxGeometry x="127" width="123" height="66" as="geometry">
+                        <mxRectangle width="123" height="66" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="198" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="195" vertex="1">
+                    <mxGeometry x="250" width="130" height="66" as="geometry">
+                        <mxRectangle width="130" height="66" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="199" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="190" vertex="1">
+                    <mxGeometry y="133" width="380" height="67" as="geometry"/>
+                </mxCell>
+                <mxCell id="200" value="行业2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="199" vertex="1">
+                    <mxGeometry width="127" height="67" as="geometry">
+                        <mxRectangle width="127" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="201" value="在贷-否" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="199" vertex="1">
+                    <mxGeometry x="127" width="123" height="67" as="geometry">
+                        <mxRectangle width="123" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="202" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="199" vertex="1">
+                    <mxGeometry x="250" width="130" height="67" as="geometry">
+                        <mxRectangle width="130" height="67" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="203" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="189" vertex="1">
+                    <mxGeometry x="890" y="50" width="350" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="203" vertex="1">
+                    <mxGeometry width="350" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="205" value="行业" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="204" vertex="1">
+                    <mxGeometry width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="206" value="提款率（升序）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="204" vertex="1">
+                    <mxGeometry x="175" width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="207" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="203" vertex="1">
+                    <mxGeometry y="70" width="350" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="208" value="行业1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="207" vertex="1">
+                    <mxGeometry width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="209" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="207" vertex="1">
+                    <mxGeometry x="175" width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="210" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="203" vertex="1">
+                    <mxGeometry y="140" width="350" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="211" value="行业2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="210" vertex="1">
+                    <mxGeometry width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="212" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="210" vertex="1">
+                    <mxGeometry x="175" width="175" height="70" as="geometry">
+                        <mxRectangle width="175" height="70" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="213" value="原因太多分析不完，或找不到主因" style="swimlane;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" parent="189" vertex="1">
+                    <mxGeometry x="50" y="780" width="1300" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="soluation_1" style="swimlane;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" parent="213" vertex="1">
+                    <mxGeometry x="40" y="40" width="740" height="550" as="geometry"/>
+                </mxCell>
+                <mxCell id="214" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="226" vertex="1">
+                    <mxGeometry x="100" y="55" width="180" height="213" as="geometry"/>
+                </mxCell>
+                <mxCell id="215" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="214" vertex="1">
+                    <mxGeometry width="180" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="原因指标" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="215" vertex="1">
+                    <mxGeometry width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="217" value="IV(倒序）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="215" vertex="1">
+                    <mxGeometry x="90" width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="218" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="214" vertex="1">
+                    <mxGeometry y="53" width="180" height="54" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" value="原因指标_1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="218" vertex="1">
+                    <mxGeometry width="90" height="54" as="geometry">
+                        <mxRectangle width="90" height="54" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="220" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="218" vertex="1">
+                    <mxGeometry x="90" width="90" height="54" as="geometry">
+                        <mxRectangle width="90" height="54" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="221" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="214" vertex="1">
+                    <mxGeometry y="107" width="180" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" value="原因指标_2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="221" vertex="1">
+                    <mxGeometry width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="223" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="221" vertex="1">
+                    <mxGeometry x="90" width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="230" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="214" vertex="1">
+                    <mxGeometry y="160" width="180" height="53" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="..." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="230" vertex="1">
+                    <mxGeometry width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="232" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="230" vertex="1">
+                    <mxGeometry x="90" width="90" height="53" as="geometry">
+                        <mxRectangle width="90" height="53" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="224" value="模型" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="226" vertex="1">
+                    <mxGeometry x="430" y="75" width="190" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="225" value="原因指标_1_feature_importance&#10;原因指标_2_feature_importance&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="224" vertex="1">
+                    <mxGeometry y="30" width="190" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="226" vertex="1">
+                    <mxGeometry x="180" y="330" width="320" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="233" vertex="1">
+                    <mxGeometry width="320" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" value="feature_i_value_1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="234" vertex="1">
+                    <mxGeometry width="160" height="43" as="geometry">
+                        <mxRectangle width="160" height="43" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="236" value="WOE（倒序）" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="234" vertex="1">
+                    <mxGeometry x="160" width="160" height="43" as="geometry">
+                        <mxRectangle width="160" height="43" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="237" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="233" vertex="1">
+                    <mxGeometry y="43" width="320" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="238" value="feature_i_value_2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="237" vertex="1">
+                    <mxGeometry width="160" height="44" as="geometry">
+                        <mxRectangle width="160" height="44" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="239" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="237" vertex="1">
+                    <mxGeometry x="160" width="160" height="44" as="geometry">
+                        <mxRectangle width="160" height="44" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="240" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="233" vertex="1">
+                    <mxGeometry y="87" width="320" height="43" as="geometry"/>
+                </mxCell>
+                <mxCell id="241" value="..." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="240" vertex="1">
+                    <mxGeometry width="160" height="43" as="geometry">
+                        <mxRectangle width="160" height="43" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="242" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#f0f0f0;" parent="240" vertex="1">
+                    <mxGeometry x="160" width="160" height="43" as="geometry">
+                        <mxRectangle width="160" height="43" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="227" value="soluation_2" style="swimlane;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" parent="213" vertex="1">
+                    <mxGeometry x="815" y="40" width="435" height="420" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="one_hot特征建立模型" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="227" vertex="1">
+                    <mxGeometry x="45" y="55" width="315" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="原因指标_1_value1_feature_importance&#10;原因指标_1_value2_feature_importance&#10;...&#10;原因指标_2_value_1_feature_importance&#10;原因指标_2_value_2_feature_importance&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="228" vertex="1">
+                    <mxGeometry y="30" width="315" height="175" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
