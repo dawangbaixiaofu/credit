@@ -4,3 +4,4 @@ GiveMeSomeCredit.zip
 *.pkl
 *.csv
 *.joblib
+__pycache__
