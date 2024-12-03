@@ -35,7 +35,7 @@ class ActionSQLConfig:
     
     )
     , actions as (
-        select distinct {ActionConfig.id_field} as ccif_no, {ActionConfig.datetime_field} as action_datetime, {ActionConfig.action_field}
+        select distinct {ActionConfig.id_field} as ccif_no, {ActionConfig.datetime_field} as action_date, {ActionConfig.action_field}
         from {ActionConfig.table}
         where 
             {ActionConfig.datetime_field} >= '{RepresentationConfig.compare_start_date}'
@@ -44,7 +44,7 @@ class ActionSQLConfig:
         -- etc
 
     )
-    select distinct users.ccif_no, action_datetime, 
+    select distinct users.ccif_no, action_date, 
         case when {ActionConfig.action_field} is null then 0 
             else {ActionConfig.action_field}
             end as {ActionConfig.customized_action_name}

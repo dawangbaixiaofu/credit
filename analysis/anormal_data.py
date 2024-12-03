@@ -49,7 +49,7 @@ class Statistic:
             end_date = pd.to_datetime(RepresentationConfig.compare_end_date)
         else:
             raise TypeError(f"this type '{type}' is invalid.")
-        action = self.aciton[(self.action['action_date']>= start_date) & (self.action['action_date'] <= end_date)]
+        action = self.action[(self.action['action_date']>= start_date) & (self.action['action_date'] <= end_date)]
         return action
 
 
@@ -57,8 +57,6 @@ class Statistic:
         period:str = RepresentationConfig.period_2_1
         target:str = RepresentationConfig.target
 
-        check_target = ["sum", "count", "mean", "production_per_user", "production_per_hundred_users"]
-        assert target in check_target, f"argument target = '{target}' is invalid."
 
         periods = ['year', 'season', 'month', 'week', 'day']
         index = periods.index(period)
@@ -71,11 +69,17 @@ class Statistic:
             s = action.groupby(by=by).agg({f"{ActionConfig.customized_action_name}": target})
         
         # todo: 人产，百产
-        if target == "production_per_user":
+        elif target == "production_per_user":
             pass
         elif target == "production_per_hundred_users":
             pass
-        
+        elif target == "mean_by_user":
+            # calculate sum, calculate distinct count, then calculate mean by distinct user
+            s = action.groupby(by=by).agg({ActionConfig.customized_action_name:"sum"})
+            cnt:pd.Series = action.groupby(by=by)[ActionConfig.customized_action_name].nunique()
+            s[ActionConfig.customized_action_name] = s[ActionConfig.customized_action_name]/cnt
+        else:
+            raise TypeError(f"argument target '{target}' is invalid.")
         self.s_2_1 = s.reset_index()
         return self.s_2_1
     
@@ -93,14 +97,11 @@ class Statistic:
 
         s_2_1 = self.statistic_2_1(type=type)
 
-        if target in ["sum", "count", "mean"]:
-            s = s_2_1.groupby(by=by).agg({f"{ActionConfig.customized_action_name}": target})
-        
-        # todo: 人产，百产
-        if target == "production_per_user":
-            pass
-        elif target == "production_per_hundred_users":
-            pass
+        if target in ["sum", "count", "mean", "mean_by_user", "production_per_user", "production_per_hundred_users"]:
+            s = s_2_1.groupby(by=by).agg({f"{ActionConfig.customized_action_name}": "mean"})
+            
+        else:
+            raise TypeError(f"argument target '{target}' is invalid.")
         
         self.s_2_2 = s.reset_index()
         return self.s_2_2
@@ -112,14 +113,17 @@ class Statistic:
         """
         if target_type == "s_2_1":
             cur_data = self.statistic_2_1(type='show')
-            assert cur_data.shape[0] >= 2, f"length of cur_data is {cur_data.shape[0]}, which is less than 2. It is invalid for sequential compare."
-            cur_data = cur_data.sort_values(by='action_date')
-            compare_data = cur_data[:-1]
-        if target_type == "s_2_2":
+        elif target_type == "s_2_2":
             cur_data = self.statistic_2_2(type='show')
-            cur_data = cur_data.sort_values(by='action_date')
-            compare_data = cur_data[:-1]
-        return cur_data[1:], compare_data
+        else:
+            raise TypeError(f"target type '{target_type}' is invalid.")
+        assert cur_data.shape[0] >= 2, f"length of cur_data is {cur_data.shape[0]}, which is less than 2. It is invalid for sequential compare."
+        compare_data = cur_data[:-1]
+        compare_data.reset_index(drop=True, inplace=True)
+
+        cur_data = cur_data[1:]
+        cur_data.reset_index(drop=True, inplace=True)
+        return cur_data, compare_data
 
 
     def compare_with_history(self, target_type:str = "s_2_1") -> tuple:
@@ -130,9 +134,16 @@ class Statistic:
             cur_data = self.statistic_2_1(type='show')
             compare_data = self.statistic_2_1(type='compare')
         
-        if target_type == "s_2_2":
+        elif target_type == "s_2_2":
             cur_data = self.statistic_2_2(type='show')
             compare_data = self.statistic_2_2(type='compare')
+        else:
+            raise TypeError(f"target type {target_type} is invalid.")
+        
+        # 历史对比的时候，不同年份的相同月份对应的周可能不一致
+        min_cnt = min(cur_data.shape[0], compare_data.shape[0])
+        cur_data = cur_data[:min_cnt]
+        compare_data = compare_data[:min_cnt]
         return cur_data, compare_data
 
     
@@ -150,20 +161,13 @@ if __name__ == "__main__":
     'Category': ['A', 'B', 'A', 'B', 'C', 'A', 'B', 'C', 'A', 'B'],
     'category_1':['A', 'C', 'A', 'B', 'C', 'A', 'B', 'C', 'A', 'D'],
     'category_2':['A', 'C', 'A', 'B', 'C', 'A', 'B', 'C', 'A', 'D'],
-    'Values': [10, 20, 20, 40, 50, 60, 70, 80, 90, 100]
+    'Values': [10, 20, 10, 40, 50, 60, 70, 80, 90, 100]
     })
-
-    # 按照'Category'列进行分组，并计算每组的非NA/null值的数量
-    grouped_counts = df.groupby(['category_1','category_2']).agg({
-        'Values': 'count'
-    }).reset_index()
-
-    print(grouped_counts)
-
-    dt = '2024-10-01'
-    dt1 = '2024/10/01'
-    dt_obj = pd.to_datetime(dt)
-    print(isinstance(dt_obj, datetime))
-    print(pd.to_datetime(dt), type(pd.to_datetime(dt1)))
-    print(pd.to_datetime(dt) > pd.to_datetime('2024/09/30'))
-    print(pd.to_datetime(dt) < datetime(2024, 11, 27))
+    s1 = df.groupby(['Category', 'category_1', 'category_2']).agg({'Values':'sum'})
+    print(s1)
+    s2 = df.groupby(['Category', 'category_1', 'category_2'])['Values'].nunique()
+    print(s2)
+    s3 = df.groupby(['Category', 'category_1', 'category_2']).agg({'Values':'count'})
+    print(s3)
+    s1['Values'] = s1['Values']/s2
+    print(s1)

@@ -40,7 +40,7 @@ class ActionSQLConfig:
         -- etc
 
     )
-    select users.ccif_no, action_datetime, 
+    select users.ccif_no, action_date, 
         case when {ActionConfig.action_field} is null then 0 
             else {ActionConfig.action_field}
             end as {ActionConfig.customized_action_name}
