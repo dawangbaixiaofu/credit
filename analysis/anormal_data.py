@@ -76,7 +76,7 @@ class Statistic:
         elif target == "mean_by_user":
             # calculate sum, calculate distinct count, then calculate mean by distinct user
             s = action.groupby(by=by).agg({ActionConfig.customized_action_name:"sum"})
-            cnt:pd.Series = action.groupby(by=by)[ActionConfig.customized_action_name].nunique()
+            cnt:pd.Series = action.groupby(by=by)['ccif_no'].nunique()
             s[ActionConfig.customized_action_name] = s[ActionConfig.customized_action_name]/cnt
         else:
             raise TypeError(f"argument target '{target}' is invalid.")
