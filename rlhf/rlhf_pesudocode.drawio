@@ -1,53 +1,71 @@
 <mxfile host="65bd71144e">
     <diagram id="95fcyAgAGgI-n5src2xL" name="Page-1">
-        <mxGraphModel dx="1155" dy="1756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1913" dy="2026" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="3" value="PPO-Clip Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="PPO-Clip Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="20" y="380" width="540" height="400" as="geometry"/>
                 </mxCell>
-                <mxCell id="8" value="Components" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="-120" width="1070" height="440" as="geometry"/>
+                <mxCell id="8" value="Components" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="-110" width="1070" height="440" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="PPO-Clip Algorithm Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;policy&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;sampled trajectories&lt;br&gt;value function&lt;br&gt;reward function&lt;br&gt;advantage function&lt;br&gt;optimizer&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
-                    <mxGeometry x="40" y="80" width="210" height="130" as="geometry"/>
+                <mxCell id="2" value="PPO-Clip Algorithm Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;policy&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;sampled trajectories&lt;br&gt;value function&lt;br&gt;reward function&lt;br&gt;advantage function&lt;br&gt;optimizer&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="8" vertex="1">
+                    <mxGeometry x="830" y="260" width="210" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="4" value="GAE Algorithm Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;advantage&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
+                <mxCell id="4" value="GAE Algorithm Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;advantage&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Q(s,t) function&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;V (s) function&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="8" vertex="1">
                     <mxGeometry x="300" y="80" width="210" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="Value function Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;loss&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
-                    <mxGeometry x="560" y="80" width="210" height="130" as="geometry"/>
+                <mxCell id="5" value="Value function Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="8" vertex="1">
+                    <mxGeometry x="830" y="80" width="210" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="6" value="reward function Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;Bradley-Terry model&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;loss&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
-                    <mxGeometry x="820" y="80" width="210" height="130" as="geometry"/>
+                <mxCell id="6" value="reward model Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;binary classifier loss&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="8" vertex="1">
+                    <mxGeometry x="570" y="260" width="210" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="7" value="&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;tragectory components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/blockquote&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
+                <mxCell id="7" value="&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;tragectory components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;(s0, a0, s1, a1, ...., sn, an)&lt;/span&gt;&lt;/blockquote&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="8" vertex="1">
                     <mxGeometry x="40" y="260" width="210" height="130" as="geometry"/>
                 </mxCell>
-                <mxCell id="9" value="GAE Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="19" value="&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;Policy Gradient Optimize components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;trajectory&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;expected cumulative reward&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;MDP&lt;/span&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;span style=&quot;background-color: rgb(42, 37, 47);&quot;&gt;SGD&lt;/span&gt;&lt;/blockquote&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
+                    <mxGeometry x="40" y="80" width="210" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="Q function Components:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
+                    <mxGeometry x="570" y="80" width="210" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="samplng &amp;amp; off-policy learning" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="8">
+                    <mxGeometry x="300" y="260" width="210" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="GAE Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="600" y="380" width="540" height="400" as="geometry"/>
                 </mxCell>
-                <mxCell id="10" value="value function estimator Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="10" value="value function estimator Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="20" y="820" width="540" height="400" as="geometry"/>
                 </mxCell>
-                <mxCell id="11" value="reward function estimator Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="11" value="reward function estimator Pesudocode" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="600" y="820" width="540" height="400" as="geometry"/>
                 </mxCell>
-                <mxCell id="13" value="issues:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;how to understand trajectory and episode in language model&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;namely, what is state and action in nlp?&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s0:prompt&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;a1:next_token&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s1:s0+a1&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;a2:next_token&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s3:s1+a2&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;....&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;how language model generates different trajectories for one prompt?&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;different sampling theory, for example: top-p, beam-search, setting different tempeture&lt;/blockquote&gt;优化目标：从期望出发，最大化期望累计奖励&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" vertex="1" parent="1">
-                    <mxGeometry x="1120" y="-120" width="370" height="320" as="geometry"/>
+                <mxCell id="17" value="损失函数属于二分类的损失函数" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="11">
+                    <mxGeometry x="160" y="60" width="190" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="" style="endArrow=none;html=1;" edge="1" parent="1">
+                <mxCell id="13" value="issues:&lt;br&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;how to understand trajectory and episode in language model&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;namely, what is state and action in nlp?&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s0:prompt&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;a1:next_token&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s1:s0+a1&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;a2:next_token&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;s3:s1+a2&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;....&lt;/blockquote&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;how language model generates different trajectories for one prompt?&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;different sampling theory, for example: top-p, beam-search, setting different tempeture&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;pytorch代码上log(P(\theta))是如何进行求导的？&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;&lt;br&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;what is importance sampling? and the variance of it?&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="-120" width="440" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="endArrow=none;html=1;" parent="1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1620" y="1270" as="sourcePoint"/>
                         <mxPoint x="1620" y="-120" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="15" value="Gradient Policy Optimization" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="15" value="Gradient Policy Optimization" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1870" y="-110" width="540" height="400" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="Importance sampling &amp;amp; off-policy learning" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="18" value="&lt;span style=&quot;text-align: left; background-color: rgb(43, 43, 43);&quot;&gt;优化目标：从期望出发，最大化期望累计奖励&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="15">
+                    <mxGeometry x="140" y="60" width="260" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Importance sampling &amp;amp; off-policy learning" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="1870" y="360" width="540" height="400" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="TRPO" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1160" y="380" width="540" height="400" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
