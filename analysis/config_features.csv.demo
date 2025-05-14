@@ -1,0 +1,5 @@
+type,sub_type,table,id_field,datetime_field,feature_field,customized_feature_name
+static,,xxxxx,ccif,create_time,balance,balance
+static,,xxxxx,ccif,create_time,industry_name_l4,industry
+static,,xxxxx,ccif,create_time,age,age
+static,,xxxxx,ccif,create_time,location,location
