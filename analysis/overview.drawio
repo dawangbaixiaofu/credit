@@ -437,6 +437,7 @@
                 </mxCell>
                 <mxCell id="233" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="226" vertex="1">
                     <mxGeometry x="340" y="60" width="320" height="130" as="geometry"/>
+
                 </mxCell>
                 <mxCell id="234" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#f0f0f0;" parent="233" vertex="1">
                     <mxGeometry width="320" height="43" as="geometry"/>
@@ -477,6 +478,7 @@
                         <mxRectangle width="160" height="43" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
+
                 <mxCell id="244" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontColor=#f0f0f0;" parent="226" vertex="1">
                     <mxGeometry x="100" y="300" width="180" height="213" as="geometry"/>
                 </mxCell>
@@ -589,20 +591,14 @@
                 </mxCell>
                 <mxCell id="227" value="soluation_2" style="swimlane;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" parent="213" vertex="1">
                     <mxGeometry x="815" y="40" width="435" height="440" as="geometry"/>
-                </mxCell>
-                <mxCell id="228" value="one_hot特征建立模型" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="227" vertex="1">
-                    <mxGeometry x="45" y="55" width="315" height="205" as="geometry"/>
-                </mxCell>
-                <mxCell id="229" value="原因指标_1_value1_feature_importance&#10;原因指标_1_value2_feature_importance&#10;...&#10;原因指标_2_value_1_feature_importance&#10;原因指标_2_value_2_feature_importance&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="228" vertex="1">
-                    <mxGeometry y="30" width="315" height="175" as="geometry"/>
-                </mxCell>
+
+                <mxCell id="227" value="soluation_2" style="swimlane;whiteSpace=wrap;html=1;fontColor=#f0f0f0;" parent="213" vertex="1">
+                    <mxGeometry x="815" y="40" width="435" height="420" as="geometry"/>
+
+
                 <mxCell id="224" value="模型" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="227" vertex="1">
                     <mxGeometry x="55" y="290" width="190" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="225" value="原因指标_1_feature_importance&#10;原因指标_2_feature_importance&#10;..." style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="224" vertex="1">
                     <mxGeometry y="30" width="190" height="90" as="geometry"/>
                 </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
-</mxfile>
